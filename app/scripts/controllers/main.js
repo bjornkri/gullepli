@@ -1,9 +1,11 @@
 'use strict';
 
 angular.module('gullepliApp')
-  .controller('MainCtrl', function ($scope, ngAudio) {
+  .controller('MainCtrl', function ($scope, ngAudio, Project) {
       $scope.timerRunning = false;
       $scope.buttonLabel = 'Start timer';
+
+      $scope.projects = Project.projects;
 
       $scope.audio = ngAudio.load('/audio/analog-alarm-clock.wav');
 
